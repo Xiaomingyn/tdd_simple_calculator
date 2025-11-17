@@ -98,3 +98,15 @@ def test_avg_manages_empty_list_before_outlier_removal():
 
     result = calculator.avg([], lt=15, ut=90)
     assert result == 0    
+
+def test_avg_manages_zero_value_lower_outlier():
+    calculator = SimpleCalculator()
+
+    result = calculator.avg([-1, 0, 1], lt=0)
+    assert result == 0.5    
+
+def test_avg_accepts_generators():
+    calculator = SimpleCalculator()
+
+    result = calculator.avg(i for i in [2, 5, 12, 98])
+    assert result == 29.25
