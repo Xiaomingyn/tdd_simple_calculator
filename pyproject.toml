@@ -1,0 +1,22 @@
+[project]
+name = "tdd-simple-calculator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flake8>=7.3.0",
+    "punch-py>=2.0.0",
+    "sphinx>=8.2.3",
+    "watchdog>=6.0.0",
+    "wheel>=0.45.1",
+]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.11.3",
+    "ipython>=9.7.0",
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+    "tox>=4.32.0",
+]
